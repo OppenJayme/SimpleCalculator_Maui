@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Calculator1"
+             x:Class="Calculator1.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="200, *">
+        <Border BackgroundColor="LightBlue"
+                StrokeShape="RoundRectangle 0 0 25 25">
+            <VerticalStackLayout >
+                <Entry Text="{Binding ExpressionDisplay}"
+                       HorizontalTextAlignment="End"
+                       FontSize="75"
+                       IsReadOnly="True"/>
+                <Label Text="{Binding ResultDisplay}"
+                       HorizontalTextAlignment="End"
+                       FontSize="50"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Grid Grid.Row="1"
+              RowDefinitions="*,*,*,*,*"
+              ColumnDefinitions="*,*,*,*">
+
+            <Button Grid.Row="0" Grid.Column="0" Text="AC" Command="{Binding HandleButtonPressCommand}" CommandParameter="AC"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="0" Grid.Column="3" Text="/" Command="{Binding HandleButtonPressCommand}" CommandParameter="/"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+
+            <Button Grid.Row="1" Grid.Column="0" Text="7" Command="{Binding HandleButtonPressCommand}" CommandParameter="7"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="1" Grid.Column="1" Text="8" Command="{Binding HandleButtonPressCommand}" CommandParameter="8"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="1" Grid.Column="2" Text="9" Command="{Binding HandleButtonPressCommand}" CommandParameter="9"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="1" Grid.Column="3" Text="X" Command="{Binding HandleButtonPressCommand}" CommandParameter="X"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+
+            <Button Grid.Row="2" Grid.Column="0" Text="4" Command="{Binding HandleButtonPressCommand}" CommandParameter="4"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="2" Grid.Column="1" Text="5" Command="{Binding HandleButtonPressCommand}" CommandParameter="5"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="2" Grid.Column="2" Text="6" Command="{Binding HandleButtonPressCommand}" CommandParameter="6"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="2" Grid.Column="3" Text="-" Command="{Binding HandleButtonPressCommand}" CommandParameter="-"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+
+            <Button Grid.Row="3" Grid.Column="0" Text="1" Command="{Binding HandleButtonPressCommand}" CommandParameter="1"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="3" Grid.Column="1" Text="2" Command="{Binding HandleButtonPressCommand}" CommandParameter="2"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="3" Grid.Column="2" Text="3" Command="{Binding HandleButtonPressCommand}" CommandParameter="3"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="3" Grid.Column="3" Text="+" Command="{Binding HandleButtonPressCommand}" CommandParameter="+"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+
+            <Button Grid.Row="4" Grid.Column="0" Text="0" Command="{Binding HandleButtonPressCommand}" CommandParameter="0"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="4" Grid.Column="1" Text="." Command="{Binding HandleButtonPressCommand}" CommandParameter="."
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="4" Grid.Column="2" Text="DE" Command="{Binding HandleButtonPressCommand}" CommandParameter="DE"
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+            <Button Grid.Row="4" Grid.Column="3" Text="=" Command="{Binding HandleButtonPressCommand}" CommandParameter="="
+                WidthRequest="80" HeightRequest="80" FontSize="32" CornerRadius="40" FontAttributes="Bold" TextColor="White" />
+        </Grid>
+    </Grid>
+</ContentPage>

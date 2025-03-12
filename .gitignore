@@ -1,0 +1,64 @@
+# Visual Studio-specific files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build and output folders
+bin/
+obj/
+AppPackages/
+TestResults/
+Backup*/
+publish/
+out/
+logs/
+
+# User-specific settings
+*.psess
+*.dotCover
+*.ncrunchsolution
+*.sln.cache
+*.vsconfig
+
+# .NET-specific files
+*.exe
+*.dll
+*.pdb
+*.mdb
+*.ilk
+*.idb
+*.tlog
+*.log
+*.cache
+*.manifest
+*.tlog/
+*.Build.Cleanup.log
+
+# macOS and Linux files
+.DS_Store
+._*
+*.swp
+*~
+
+# JetBrains Rider and ReSharper
+.idea/
+*.dotSettings.user
+*.sln.iml
+*_CodeCoverage/
+
+# Maui-specific generated files
+*.a
+*.so
+*.dylib
+*.ipa
+*.apk
+*.app
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata/
+*.nupkg
+*.lock.json
+.nuget/
